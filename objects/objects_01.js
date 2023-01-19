@@ -61,7 +61,7 @@ const setting={
   health:100,
 }
 
-const out=JSON.stringify(setting,["level","health"]);
+const out=JSON.stringify(setting,["level","health"]); // this will stringify only level and health
 const out1=JSON.stringify(setting);
 console.log(out);
 
