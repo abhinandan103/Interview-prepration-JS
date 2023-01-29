@@ -6,7 +6,7 @@ const user = {
 console.log(user["adding a space"]);
 
 const property = "firstName";
-const name = "Abhinadnan";
+const name1 = "Abhinadnan";
 const obj = {
   [property]: name, //This is how we add dynamic property to objects
 };
@@ -65,5 +65,52 @@ const out=JSON.stringify(setting,["level","health"]); // this will stringify onl
 const out1=JSON.stringify(setting);
 console.log(out);
 
+// ******************************************************************
 
+const shape={
+  radius:10,
+  diameter(){
+    console.log(this.radius*2);  //20
+  },
+  parameter:()=>{
+    console.log(this.radius*10); // undefined because in case of arrow function this points to gloabal window object
+  }
+};
+
+shape.diameter();
+shape.parameter();
+
+
+// *********************************************************************
+
+// What is destructuring in objects
+destructuring in objects means taking out a property from the object
+let user1={
+  name:"Abhinandan",
+  age:26
+};
+
+const {name}=user1;
+const{ name:myName}=user1;
+console.log(name); // Abhinandan
+console.log(myName); // Abhinandan
+
+
+// Nested destructuring
+
+let user2={
+  name:"Abhinandan",
+  age:26,
+  fullname:{
+    firstName:"deepu",
+    lastName:"kumar",
+  },
+};
+
+const {fullname:{firstName}}=user2;
+console.log(firstName);
+
+
+
+// ***************************************************************
 
