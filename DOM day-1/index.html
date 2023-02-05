@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- document.title will work because title is loaded before the script -->
+    <!-- defer is used so that script loads once all the DOM has been loaded -->
+    <!-- this is the reason why people use defer else some folks even prefer to put the script tag in the last line of the body -->
+    <!-- if defer is not used then script will load first and the DOM has not been loaded till now. Now any DOM manipulation which we will try will not work -->
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1>Lorem ipsum dolor sit amet ssfsv.</h1>
+    <p>this is a para 1</p>
+    <p>this is a para 2</p>
+    <h2 id="access">this is a h2 tag</h2>
+    <h1 class="test">this is a demo h1 </h1>
+    <h2 class="test">this is a demo h2 </h2>
+    <!-- in case we dont want to use the defer tag -->
+    <!-- <script src="script.js"></script>  -->
+</body>
+</html>
+
